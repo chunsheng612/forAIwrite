@@ -16,7 +16,8 @@
         }
         .container {
             position: relative;
-            width: 800px; /* 設置容器的寬度 */
+            width: 90%; /* 設置容器的寬度為90% */
+            max-width: 800px; /* 最大寬度為800px */
             text-align: center;
             background-color: white;
             padding: 20px;
@@ -32,10 +33,24 @@
             display: block;
             background-color: rgba(0, 0, 0, 0); /* 透明背景 */
         }
-        .link1 { top: 80px; left: 610px; width: 160px; height: 160px; }
-        .link2 { top: 230px; left: 610px; width: 160px; height: 160px; }
-        .link3 { top: 380px; left: 610px; width: 160px; height: 160px; }
-        .link4 { top: 530px; left: 610px; width: 160px; height: 160px; }
+        .link1, .link2, .link3, .link4 {
+            width: 20%; /* 寬度設置為容器的20% */
+            padding-bottom: 20%; /* 這樣會使每個區域成為正方形 */
+        }
+        .link1 { top: 10%; left: 75%; }
+        .link2 { top: 32%; left: 75%; }
+        .link3 { top: 54%; left: 75%; }
+        .link4 { top: 76%; left: 75%; }
+        @media (max-width: 600px) {
+            .link1, .link2, .link3, .link4 {
+                width: 30%; /* 調整在小螢幕上的寬度 */
+                padding-bottom: 30%;
+            }
+            .link1 { top: 12%; left: 68%; }
+            .link2 { top: 36%; left: 68%; }
+            .link3 { top: 60%; left: 68%; }
+            .link4 { top: 84%; left: 68%; }
+        }
     </style>
 </head>
 <body>
